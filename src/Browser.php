@@ -31,7 +31,6 @@ class Browser
             'Connection'                => 'keep-alive',
             'Accept-Charset'            => 'utf-8',
             'Pragma'                    => 'no-cache',
-            'X-Requested-With'          => 'XMLHttpRequest',
             'Upgrade-Insecure-Requests' => '1',
         ], $additionalHeaders);
     }

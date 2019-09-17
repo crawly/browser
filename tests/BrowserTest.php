@@ -26,7 +26,6 @@ class BrowserTest extends TestCase
         $this->assertArrayHasKey('Connection', $this->headers);
         $this->assertArrayHasKey('Accept-Charset', $this->headers);
         $this->assertArrayHasKey('Pragma', $this->headers);
-        $this->assertArrayHasKey('X-Requested-With', $this->headers);
         $this->assertArrayHasKey('Upgrade-Insecure-Requests', $this->headers);
     }
 
@@ -38,11 +37,6 @@ class BrowserTest extends TestCase
     public function testPragma()
     {
         $this->assertEquals('no-cache', $this->headers['Pragma']);
-    }
-
-    public function testXRequestedWith()
-    {
-        $this->assertEquals('XMLHttpRequest', $this->headers['X-Requested-With']);
     }
 
     public function testUpgradeInsecureRequests()
